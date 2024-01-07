@@ -21,4 +21,13 @@ app.use(express.urlencoded({
 app.use(express.static("public")) //to store public assests
 app.use(cookieParser()) //access cookies from server
 
+//routes import
+import userRouter from './routes/user.routes.js'
+
+//routes declaration
+app.use("/api/v1/users", userRouter)
+
+
+
+
 export { app }
